@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI CALCULATOR</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  	
+  	.con{
+  	    background-color: powderblue; 
+  		border: 2px solid blue;
+  		border-radius: 20px;
+  		width: 40%;
+  		margin-left: 33%
+
+  		}
+  	
+  	 }
+  	 table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 30%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding:6px;
+}
+
+tr:hover {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+
+<body style="background-image: url({{ url_for('static', filename='2.png') }});
+  		background-size: cover;
+        background-repeat: no-repeat;">
+<div class="container">
+<div class="con">
+<label>
+	<form action="\" method="post">
+		<h1 class="d-inline-flex p-2">BMI CALCULATOR</h1>
+		<hr>
+		<div class="form-group" class="form-control">
+		<p>GENDER:</p><select name="GENDER" required class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+			<div class="dropdown-menu" aria-labelledby="GENDER">
+			<option value ='0' >MALE</option>
+			<option value ='1' >FEMALE</option></div>
+		</select>
+		</div>
+		<div class="form-group">
+		<p>HEIGHT(fts):<input type="text" class="form-control" name="HEIGHT" id="HEIGHT" value="{{HEIGHT}}" placeholder="  " required  ></p>
+		</div>
+		<div class="form-group" class="form-control">
+		<p>WEIGHT(kgs):<input type="text" class="form-control" name="WEIGHT" id="WEIGHT" value="{{WEIGHT}}" placeholder=" " required ></p>
+		</div>
+		<div class="form-group">
+		<p>ALGORITHM ?</p>
+		<select name="MODELS" required class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+		<div class="dropdown-menu" aria-labelledby="ALGORITHM">
+  		<option value="Decission Tree classifier">Decission Tree CLASSIFIER</option>
+  		<option value="Decission Tree REGRESSOR">Decission Tree REGRESSOR</option>
+  	    </div>
+		</select>
+		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary">Submit</button>
+
+
+	</form>
+	
+</label>
+<div>
+<h1>INDEX:: <marquee width="4%" direction="up" height="1%">{{answer}} </marquee></h1> </div>
+<div class="form-group" class="form-control">
+			<table>
+				<tr>
+				<th>INDEX</th>
+				<th>HEALTH STATUS</th>
+				</tr>
+				<tr>
+					<td>
+						<p>0</p>
+					</td>
+				    <td>
+						<p>Extremely Weak</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>1</p>
+					</td>
+					<td>
+						<p>Weak</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>2</p>
+					</td>
+					<td>
+						<p>Normal</p>
+					</td>
+				</tr>
+			    <tr>
+			    	<td>
+			    		<p>3</p>
+
+			    	</td>
+			    	<td>
+			    		<p>Overweight</p>
+			    	</td>
+			    </tr>
+			    <tr>
+			    	<td>
+			    		<p>4</p>
+			    	</td>
+			    	<td>
+			    		<p>Obesity</p>
+			    	</td>
+			    </tr>
+			    <tr>
+			    	<td>
+			    		<p>5</p>
+			    	</td>
+			    	<td>
+			    		<p>Extreme Obesity</p>
+			    	</td>
+			    </tr>
+
+
+				
+			</table>
+		</div> 
+	<footer>    
+		<i style="font-size:24px" class="fa">&#xf08c;</i>
+		<a href="http://www.linkedin.com/in/sumanth18131a0363" style="text-decoration:blink;" target="__blank__">follow@linkedin</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   		Visitor Number:-<!-- hitwebcounter Code START -->
+		<a href="https://www.hitwebcounter.com" target="_blank">
+			<img src="https://hitwebcounter.com/counter/counter.php?page=7204967&style=0024&nbdigits=5&type=page&initCount=0" title="User Stats" Alt="webcounterwebsite"   border="0" >
+		</a>
+
+	</footer> 
+	
+	</div>
+</div>
+</div>
+</body>
+
+</html>
